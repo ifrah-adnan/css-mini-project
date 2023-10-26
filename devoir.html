@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>devoir css</title>
+    <style>
+        .box1 {
+            border: 2px solid black;
+            height: 500px;
+            width: 300px;
+            background-color: black;
+            position: relative;
+            box-shadow: 0 0 10px 30px lightgray;
+        }
+
+        .box2 {
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 15%; 
+            left: 50%;
+            transform: translateX(-50%); 
+            background-color: palegreen;
+            border-radius: 0px 100px 20px 0px;
+        }
+
+        .box3 {
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            bottom: 15%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background-color: pink;
+            border-radius: 80px 20px 0px 0px;
+        }
+
+        .boxa {
+            border: 3px solid white;
+            width: 200px;
+           
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            border-radius: 90px 50px 40px 30px;
+        }
+        .box1:hover .box2, .box1:hover .box3 {
+            transform: rotate(90deg);
+            transition: 400ms; 
+        }
+        .box1:hover .boxa {
+            animation: spin 0.7s infinite linear;
+
+        }
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg); 
+            }
+        
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <div class="boxa"></div>
+    <div class="box3"></div>
+</div>
+</body>
+</html>
